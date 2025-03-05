@@ -1,0 +1,92 @@
+This is a minimalist desktop kanban application.
+Basic usage described in built-in "help" board.
+Just start it and see ;)
+Nobene2 tested on Void and Manjaro Linux ditros, it also works on FreeBSD.
+Should work on OpenBSD and maybe on MacOS,
+Maybe only some file paths must be adjusted in nobene2.js file.
+
+Installation.
+  0) You must install Golang 1.21 and https://github.com/webview/webview_go with dependencies.
+
+  1) $ git clone https://github.com/nobene/nobene2
+
+  2) $ cd nobene2
+
+  3) $ go build
+
+     Copy "nb2" script to your path.
+     Later you can adjust default font-size value to your taste in nobene2.css:50,13 .
+
+  7) $ cd ~nobene2 && ./nobene2
+     OR
+     $ nb2
+
+Features.
+  Nobene2 is a kanban board.
+
+  On startup it loads "help" board with usage information.
+
+  You can create new board with +BoardName typed in command input field.
+
+  Instead of pressing [ENTER] on keyboard, click on <== button after each typed command.
+
+  You can clone board  with =BoardNewName typed in command input field.
+
+  You can load another board with >BoardName.
+
+  You can save current board with >> typed in command field and then by clicking <==
+   or by clicking ↧ button on screen.
+
+  You can add new card to the current board with +1 ( to 1st column ), +2 ( to 2nd column ) and so on...
+
+  By doubleclicks on card you can switch between 3 views : gray, yellow and hidden.
+  Card will be then shown with chosen view.
+
+  You can edit card just by clicking on it and typing/deleting new text from it
+  and then by moving pointer out of the card.
+
+  You can delete card by typing in it ????? and then moving pointer out of the card.
+
+  You can open/close list of all saved boards by clicking on === button.
+
+  You can clone card with +++++ typed inside of card and then you will see in command field
+  ready command like "++CardId", click on <== and card will be cloned at the bottom of column 3.
+  CardId can be copied from another board, then load new target board and procedeed with ++ to clone
+  card from 1st board to target board.
+
+  You can delete current board with /delete .
+
+  You can quit app with quit or qo r by closing Nobene2's window.
+
+  You can adjust font size of cards with inputs =0 =1 =2 =3 =4 =5 =6 in input field.
+
+  Nobene2 app has rightclickable context menu with handy copy and paste and emoji items.
+
+  And of course you can drag and drop cards to new position on board.
+
+  Every time you save board, two copies saved : BoardName and BoardName-bup.
+  *-bup boards are not shown in the list, but you can load them with >BoardName-bup .
+  If you save BoardName-bup, it creates BoardName-bup-bup :)
+  So, you can load backup of backup and work on it too.
+
+  Note: Nobene2 does not allow spaces in board name ( it's a feature ),
+  max. length of board name is 32 symbols.
+  Neither accepted board names with dashes ( it's a bug perhaps ).
+  Underscores and pluses in board nmaes are allowed.
+
+Licenses.
+
+ As a whole Nobene2 project licensed by Apache License 2.0, See : ./LICENSE.apache2
+ "nobene2" binary file and main.go, nobene2.js, nobene2.html files are licensed by Apache License 2.0,
+  See ./LICENSE.apache2
+ dragula.js, dragula.css, dragbase.js, nobene2.css are licensed by MIT License, See : ./license
+ FiraCodeNerdFont-Medium.woff file licensed by SIL OFL v1.1 License, See ./FiraCode.LICENSE
+ FontAwesome6Free-Solid.woff file licensed by SIL OFL v1.1 License, See ./FontAwesome.LICENSE
+
+Backups.
+ For backing up your works just copy entire directory "store" with all of it's content
+ somewhere outside of "nobene2" directory tree.
+ "store0" directory exists for having "help" board only starting pack,
+ just in case you some day might discard  all your prior work and start over again from scratch.
+ In such case delete all content inside "store" and copy all from "store0" to "store".
+
