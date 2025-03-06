@@ -21,7 +21,24 @@ Installation.
      OR
      $ nb2
 
-Features.
+Pains on openBSD :(
+  1) Besides steps described above on OpenBSD you must do more tricks :
+     a)
+     # ln -s /usr/lib/libc.a /usr/lib/libdl.a 
+     (it's a dirty trick, but it works).
+
+    b)
+    find in /usr/local/lib/pkgconfig files : webkit2gtk-4.0.pc webkit2gtk-web-extension-4.0.pc
+    javascriptcoregtk-4.0.pc and from each file (or maybe from some other *.pc files as well)
+     delete these flags :
+     -Wl,-z,nobtcfi  -Wl,-z,wxneeded
+
+    c)
+    set property "wxallowed" to filesystems in /etc/fstab then reboot. 
+
+    Then you can execute go build in nobene2 directory.
+
+    Features.
   Nobene2 is a kanban board.
 
   On startup it loads "help" board with usage information.
