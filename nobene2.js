@@ -188,7 +188,7 @@ async function show_all_boards() {
   console.log('current BOARD: ' + cur);
   var ls = String(boards).replace(/,/g , ' ');
   var ls1 = ls.split(' ');
-  var mn = '<br>';
+  var mn = '<div onclick="hide_menu();"><br>';
   for ( x = 0; x < ls1.length; ++x ) {
     if ( ls1[x].includes('bup') ) {
       continue;
@@ -203,7 +203,7 @@ async function show_all_boards() {
     };
     mn += '<div onclick=import_board("' + item + '");>' + item + '</div>';
   };
-  mn += '<br>';
+  mn += '<br></div>';
   document.getElementById('menu').innerHTML = mn;
   document.getElementById('menu').style.display = 'block';
   item = '';

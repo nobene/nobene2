@@ -94,23 +94,6 @@ label {
   margin-bottom: 15px;
 }
 
-#superSecret {
-  opacity: 0.01;
-  background-color: rgb(0,0,0,0.3);
-  height: 60px;
-  width: 100%;
-  transition: 0.2s;
-  object-fit: cover;
-}
-
-#superSecret:hover {
-  animation: superSUPERSecret;
-  animation-duration: 0.5s;
-  animation-iteration-count: infinite;
-  opacity: 0.8;
-  background-color: rgb(0,0,0,0.1);
-}
-
 @keyframes superSUPERSecret {
   0%{transform: rotate(3deg)}
   50%{transform: rotate(-3deg)}
@@ -131,7 +114,7 @@ ul {
 }
 
 .parent {
-  background-color: transparent; /* rgba(255, 255, 255, 0.2); */
+  background-color: transparent;
   margin: 10px 0;
   padding: 4px;
 }
@@ -186,19 +169,15 @@ button:hover {
   background-color: transparent;
   width: 20%;
 }
+
 .container:nth-child(odd) {
   background-color: transparent;
 }
-/*
- * note that styling gu-mirror directly is a bad practice because it's too generic.
- * you're better off giving the draggable elements a unique class and styling that directly!
- */
+
 .container > div,
 .gu-mirror {
   margin: 6px;
   padding: 10px;
-/*   background-color: #c7c8cc; */
-/*  transition: opacity 0.4s ease-in-out; */
 }
 .container > div {
   cursor: move;
@@ -207,8 +186,9 @@ button:hover {
   cursor: -webkit-grab;
   border: 2px outset #8d7b68;
   border-radius: 6px;
-  background-color: #b2b7b3;
+  background-color: #b5b4b3;
   white-space: pre-wrap;
+  font-weight: 400 ! important;
 /*  width: 19% */
 }
 .gu-mirror {
@@ -237,13 +217,14 @@ textarea {
   margin-left: 5%;
 }
 
-#menu > div:hover {
+#menu > div > div:hover {
   background-color : #78aba8 !important;
+  font-weight: 550;
 }
 
 #menu {
-  background-color: #b2b7b3 !important;
-  color : #8d7b68 !important;
+  background-color: #b5b4b3 !important;
+  color : #6f4e37 !important;
   border: 4px solid #34626c;
   border-radius: 10px;
   min-height: 200px;
@@ -255,8 +236,8 @@ textarea {
 }
 
 #menu:focus {
-  background-color: #b2b7b3 !important;
-  color : #8d7b68 !important;
+  background-color: transparent !important;
+  color : #6f4e37 !important;
   border: 4px solid #34626c;
   border-radius: 10px;
   min-height: 200px;
@@ -299,11 +280,11 @@ textarea {
   position: absolute;
   left: 62.5%;
   top: 89%;
-  color: #78866b !important;
+  color: #6f4e37 !important;
 }
 
 #in:focus {
-  background-color: #b2b7b3 !important;
+  background-color: #b5b4b3 !important;
   color : #8d7b68 !important;
   font-size: 36px !important;
 }
@@ -337,12 +318,14 @@ textarea {
 }
 
 div.yell {
-  background-color: #cec2a9 !important;
+  background-color: #b5b4b3 !important;
+  color: #6f4e37 !important;
   text-align: center;
+  font-weight: 580 !important;
 }
 
 div.red {
-  background-color: #b2b7b3 !important;
+  background-color: #b5b4b3 !important;
   color: darkred;
   text-align: center;
 }

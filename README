@@ -1,8 +1,12 @@
 This is a minimalist desktop kanban application.
 Basic usage described in built-in "help" board.
 Just start it and see ;)
+For abuse of emojies install Google Noto Emoji Fonts.
+on Void Linux they are known as package "noto-fonts-emoji",
+search for correct package's name on your OS.
+
 Nobene2 tested on Void and Manjaro Linux ditros, it also works on FreeBSD.
-Should work on OpenBSD and maybe on MacOS,
+Might work on OpenBSD and maybe on MacOS and NetBSD.
 Maybe only some file paths must be adjusted in nobene2.js file.
 
 Installation.
@@ -21,7 +25,7 @@ Installation.
      OR
      $ nb2
 
-Pains on openBSD :(
+Pains of installation on openBSD :(
   1) Besides steps described above on OpenBSD you must do more tricks :
      a)
      # ln -s /usr/lib/libc.a /usr/lib/libdl.a 
@@ -34,9 +38,9 @@ Pains on openBSD :(
      -Wl,-z,nobtcfi  -Wl,-z,wxneeded
 
     c)
-    set property "wxallowed" to filesystems in /etc/fstab then reboot. 
+    set property "wxallowed" to filesystems in /etc/fstab then reboot.
 
-    Then you can execute go build in nobene2 directory.
+    Then you can execute "go build" in nobene2 directory.
 
     Features.
   Nobene2 is a kanban board.
