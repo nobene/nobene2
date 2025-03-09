@@ -21,7 +21,7 @@ Installation.
      Copy "nb2" script to your path.
      Later you can adjust default font-size value to your taste in nobene2.css:50,13 .
 
-  7) $ cd ~nobene2 && ./nobene2
+  4) $ cd ~nobene2 && ./nobene2
      OR
      $ nb2
 
@@ -40,7 +40,11 @@ Pains of installation on openBSD :(
     c)
     set property "wxallowed" to filesystems in /etc/fstab then reboot.
 
-    Then you can execute "go build" in nobene2 directory.
+    d)
+    $ export CGO_LDFLAGS="-lc"
+    $ CGO_ENABLED=1 go build
+
+    e) now you can copy and start via "nb2" as described above in 3) and 4).
 
     Features.
   Nobene2 is a kanban board.
@@ -60,7 +64,7 @@ Pains of installation on openBSD :(
 
   You can add new card to the current board with +1 ( to 1st column ), +2 ( to 2nd column ) and so on...
 
-  By doubleclicks on card you can switch between 3 views : gray, yellow and hidden.
+  By doubleclicks on card you can switch between 3 views : gray, brown-centered and hidden.
   Card will be then shown with chosen view.
 
   You can edit card just by clicking on it and typing/deleting new text from it
@@ -68,7 +72,8 @@ Pains of installation on openBSD :(
 
   You can delete card by typing in it ????? and then moving pointer out of the card.
 
-  You can open/close list of all saved boards by clicking on === button.
+  You can open/close list of all saved boards by clicking on === button
+  or by clicking on top or bottom strings of menu widget.
 
   You can clone card with +++++ typed inside of card and then you will see in command field
   ready command like "++CardId", click on <== and card will be cloned at the bottom of column 3.
@@ -77,7 +82,8 @@ Pains of installation on openBSD :(
 
   You can delete current board with /delete .
 
-  You can quit app with quit or qo r by closing Nobene2's window.
+  You can quit app with quit or q
+  or by closing Nobene2's window (preferred exit method).
 
   You can adjust font size of cards with inputs =0 =1 =2 =3 =4 =5 =6 in input field.
 
